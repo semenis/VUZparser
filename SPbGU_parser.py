@@ -8,7 +8,7 @@ if name == '':
 if link == '':
     link = default_link
 response = requests.get(link)
-#.encode().decode('cp1251')
+
 
 original_attestat_count = 0
 copy_attestat_count = 0
@@ -34,3 +34,4 @@ for i in response.content.decode().replace('<td>', '').replace('</td>', '').spli
 
 
 print('Total original attestats: {}'.format(original_attestat_count))
+print('Total people finded (for check): {}'.format(original_attestat_count+copy_attestat_count))
